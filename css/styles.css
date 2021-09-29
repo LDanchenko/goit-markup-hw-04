@@ -9,6 +9,7 @@
   --card-set-gap: 30px;
   --footer-address-color: rgba(255, 255, 255, 0.6);
   --hero-gradient: rgba(47, 48, 58, 0.4);
+  --social-links-color: #afb1b8;
 }
 
 html {
@@ -289,7 +290,8 @@ body {
 }
 
 .team-card-content {
-  padding: 30px 0;
+  padding-top: 30px;
+  padding-bottom: 16px;
 }
 
 .team-card-content > .team-list-description {
@@ -430,13 +432,49 @@ body {
 .benefits-item .icon {
   width: 70px;
   height: 70px;
+  /* display: inline-flex; */
 }
 
 .benefits-item .thumb {
-  /* width: 270px;
-  height: 120px; спорно!!! посмотреть в видео*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: var(--card-set-gap);
-  padding: 25px 100px;
   background-color: var(--elements-background-color);
   border-radius: 4px;
+  width: 270px;
+  height: 120px;
 }
+
+.social-links {
+  display: flex;
+  list-style: none;
+  margin-left: 32px;
+  margin-right: 32px;
+  margin-bottom: 30px;
+}
+
+.social-links-item .icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--social-links-color);
+}
+
+.social-links-item .thumb {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-links-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-links .thumb:hover {
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+}
+/* .social-links */
