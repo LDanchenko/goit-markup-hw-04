@@ -4,10 +4,11 @@
   --accent-color: #2196f3;
   --primary-background-color: #ffffff;
   --hero-background-color: #2f303a;
-  --button-background-color: #f5f4fa;
+  --elements-background-color: #f5f4fa;
   --line-color: #ececec;
   --card-set-gap: 30px;
   --footer-address-color: rgba(255, 255, 255, 0.6);
+  --hero-gradient: rgba(47, 48, 58, 0.4);
 }
 
 html {
@@ -163,8 +164,20 @@ body {
 .section.hero {
   padding-bottom: 200px;
   padding-top: 200px;
-  background-color: var(--hero-background-color);
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
   color: var(--primary-background-color);
+  background-image: linear-gradient(
+      to right,
+      var(--hero-gradient),
+      var(--hero-gradient)
+    ),
+    url('../images/hero.jpg');
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   text-align: center;
 }
 
@@ -183,7 +196,7 @@ body {
 }
 .btn {
   display: inline-block;
-  background-color: var(--button-background-color);
+  background-color: var(--elements-background-color);
   cursor: pointer;
   color: var(--title-text-color);
   font-family: inherit;
@@ -247,7 +260,7 @@ body {
 }
 
 .team {
-  background-color: var(--button-background-color);
+  background-color: var(--elements-background-color);
 }
 
 .team-list {
@@ -392,7 +405,7 @@ body {
   border-top: 0;
 }
 
-.link.link-mail {
+.site-contact-item .link {
   display: flex;
   align-items: center;
 }
@@ -402,7 +415,28 @@ body {
   margin-right: 10px;
   fill: var(--primary-text-color);
 }
+.icon-phone {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  fill: var(--primary-text-color);
+}
 
-.link-mail:hover .icon-envelope {
+.site-contact-item:hover .icon-envelope,
+.site-contact-item:hover .icon-phone {
   fill: var(--accent-color);
+}
+
+.benefits-item .icon {
+  width: 70px;
+  height: 70px;
+}
+
+.benefits-item .thumb {
+  /* width: 270px;
+  height: 120px; спорно!!! посмотреть в видео*/
+  margin-bottom: var(--card-set-gap);
+  padding: 25px 100px;
+  background-color: var(--elements-background-color);
+  border-radius: 4px;
 }
