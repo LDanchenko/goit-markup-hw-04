@@ -477,4 +477,7 @@ body {
   border-radius: 50%;
   background-color: var(--accent-color);
 }
-/* .social-links */
+
+.thumb:hover .icon {
+  fill: var(--primary-background-color);
+}
