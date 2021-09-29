@@ -70,7 +70,7 @@ body {
   padding-right: 15px;
   margin-right: auto;
   margin-left: auto;
-  outline: 1px solid black;
+  /* outline: 1px solid black; */
 }
 
 .link {
@@ -432,7 +432,6 @@ body {
 .benefits-item .icon {
   width: 70px;
   height: 70px;
-  /* display: inline-flex; */
 }
 
 .benefits-item .thumb {
@@ -472,12 +471,12 @@ body {
   margin-right: 10px;
 }
 
-.social-links .thumb:hover {
+.social-links-item .thumb:hover {
   cursor: pointer;
   border-radius: 50%;
   background-color: var(--accent-color);
 }
 
-.thumb:hover .icon {
+.social-links-item .thumb:hover .icon {
   fill: var(--primary-background-color);
 }
