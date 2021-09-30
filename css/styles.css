@@ -180,6 +180,7 @@ body {
   background-position: center;
   background-size: cover;
   text-align: center;
+  background-color: var(--hero-background-color);
 }
 
 .hero .hero-title {
@@ -341,6 +342,10 @@ body {
 .section.section-works {
   padding-top: 0;
 }
+.section.section-clients {
+  padding-top: 101px;
+  padding-bottom: 87px;
+}
 
 .works-list {
   display: flex;
@@ -424,8 +429,10 @@ body {
   fill: var(--primary-text-color);
 }
 
-.site-contact-item:hover .icon-envelope,
-.site-contact-item:hover .icon-phone {
+.site-contact-item .link:hover .icon-envelope,
+.site-contact-item .link:focus .icon-envelope,
+.site-contact-item .link:hover .icon-phone,
+.site-contact-item .link:focus .icon-phone {
   fill: var(--accent-color);
 }
 
@@ -447,7 +454,6 @@ body {
 
 .social-links {
   display: flex;
-  list-style: none;
   margin-left: 32px;
   margin-right: 32px;
   margin-bottom: 30px;
@@ -458,10 +464,14 @@ body {
   height: 20px;
   fill: var(--social-links-color);
 }
-
-.social-links-item .thumb {
+.social-links-item {
   width: 44px;
   height: 44px;
+}
+
+.social-links-item .social-link {
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -471,12 +481,59 @@ body {
   margin-right: 10px;
 }
 
-.social-links-item .thumb:hover {
+.social-link {
   cursor: pointer;
   border-radius: 50%;
+}
+.social-link:hover,
+.social-link:focus {
   background-color: var(--accent-color);
 }
 
-.social-links-item .thumb:hover .icon {
+.social-links-item .social-link:hover .icon,
+.social-links-item .social-link:hover .hover {
   fill: var(--primary-background-color);
+  background-color: var(--accent-color);
+}
+
+.clients-list {
+  display: flex;
+  margin-right: -30px;
+}
+
+.clients-list-item {
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--social-links-color);
+  border-radius: 4px;
+}
+
+.client-link .icon {
+  height: 60px;
+  width: 106px;
+  fill: var(--social-links-color);
+}
+
+.clients-list-item .client-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.clients-list-item {
+  margin-right: 30px;
+}
+.section-clients .section-title {
+  margin-bottom: 50px;
+}
+
+.clients-list-item:hover,
+.clients-list-item:focus {
+  border: 1px solid var(--accent-color);
+}
+
+.clients-list-item .client-link:hover .icon,
+.clients-list-item .client-link:focus .icon {
+  fill: var(--accent-color);
 }
