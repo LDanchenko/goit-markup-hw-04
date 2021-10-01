@@ -491,7 +491,7 @@ body {
 }
 
 .social-links-item .social-link:hover .icon,
-.social-links-item .social-link:hover .hover {
+.social-links-item .social-link:focus .icon {
   fill: var(--primary-background-color);
   background-color: var(--accent-color);
 }
@@ -536,4 +536,31 @@ body {
 .clients-list-item .client-link:hover .icon,
 .clients-list-item .client-link:focus .icon {
   fill: var(--accent-color);
+}
+
+.page-footer {
+  display: flex;
+  align-items: baseline;
+}
+.page-footer-block p {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--primary-background-color);
+  margin-bottom: 20px;
+}
+.page-footer-block:first-child {
+  margin-right: 70px;
+}
+
+.page-footer-block .social-links {
+  margin: 0;
+}
+
+.page-footer-block .social-links-item {
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.page-footer-block .social-links-item .icon {
+  fill: var(--primary-background-color);
 }
