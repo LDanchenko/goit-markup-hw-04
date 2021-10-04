@@ -132,6 +132,7 @@ body {
 
 .site-nav {
   display: flex;
+  margin-left: 93px;
 }
 
 .logo-header.link {
@@ -143,12 +144,8 @@ body {
   display: block;
   padding: 32px 0;
 }
-.site-nav-item {
+.site-nav-item:not(:first-child) {
   margin-left: 50px;
-}
-
-.site-nav-item:first-child {
-  margin-left: 93px;
 }
 
 .site-contact-item > .link {
@@ -294,11 +291,11 @@ body {
 }
 
 .team-card-content {
-  padding-top: 30px;
-  padding-bottom: 16px;
+  padding: 30px 32px;
 }
 
 .team-card-content > .team-list-description {
+  margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
@@ -396,6 +393,11 @@ body {
   line-height: 1.875;
 }
 
+.portfolio-item-link {
+  color: inherit;
+  display: block;
+}
+
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
@@ -409,7 +411,8 @@ body {
   flex-basis: calc((100% / 3) - var(--card-set-gap));
 }
 
-.portfolio-item:hover {
+.portfolio-item .portfolio-item-link:hover,
+.portfolio-item .portfolio-item-link:focus {
   cursor: pointer;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -463,9 +466,6 @@ body {
 
 .social-links {
   display: flex;
-  margin-left: 32px;
-  margin-right: 32px;
-  margin-bottom: 30px;
 }
 
 .social-links-item .icon {
